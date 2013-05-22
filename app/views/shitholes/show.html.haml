@@ -1,0 +1,22 @@
+%p#notice= notice
+
+%p
+  %em Name
+  = @shithole.name
+%p
+  %em Score
+  = @shithole.score
+%p
+  %em Image URL
+  = @shithole.imgurl
+%p
+  %em Location
+  (
+  = @shithole.lat
+  ,
+  = @shithole.lng
+  )
+
+= link_to 'Edit', edit_shithole_path(@shithole)
+\|
+= link_to 'Back', shitholes_path

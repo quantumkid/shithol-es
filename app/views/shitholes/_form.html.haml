@@ -1,0 +1,24 @@
+= form_for @shithole do |f|
+  - if @shithole.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@shithole.errors.count, "error")} prohibited this shithole from being saved:"
+      %ul
+        - @shithole.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :score
+    = f.number_field :score, :min => 1, :max => 5
+  .field
+    = f.label :imgurl
+    = f.text_field :imgurl
+  .field
+    = f.label :lat
+    = f.text_field :lat
+  .field
+    = f.label :lng
+    = f.text_field :lng
+  .actions
+    = f.submit 'Save'

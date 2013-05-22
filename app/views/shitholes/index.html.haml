@@ -1,0 +1,17 @@
+%h1 Listing shitholes
+
+%table
+  %tr
+    %th
+    %th
+    %th
+
+  - @shitholes.each do |shithole|
+    %tr
+      %td= link_to 'Show', shithole
+      %td= link_to 'Edit', edit_shithole_path(shithole)
+      %td= link_to 'Destroy', shithole, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Shithole', new_shithole_path

@@ -1,4 +1,7 @@
 ShitholEs::Application.routes.draw do
+  resources :shitholes
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
