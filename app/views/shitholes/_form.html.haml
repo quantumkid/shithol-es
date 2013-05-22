@@ -6,7 +6,21 @@
   .control-group
     = f.label :score, :class => 'control-label'
     .controls
-      = f.number_field :score, :class => 'number_field'
+      %label.radio.inline
+        = f.radio_button :score, 1
+        1
+      %label.radio.inline
+        = f.radio_button :score, 2
+        2
+      %label.radio.inline
+        = f.radio_button :score, 3
+        3
+      %label.radio.inline
+        = f.radio_button :score, 4
+        4
+      %label.radio.inline
+        = f.radio_button :score, 5
+        5
   .control-group
     = f.label :cost, :class => 'control-label'
     .controls
