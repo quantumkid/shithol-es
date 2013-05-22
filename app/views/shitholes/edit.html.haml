@@ -1,7 +1,4 @@
-%h1 Editing shithole
-
-= render 'form'
-
-= link_to 'Show', @shithole
-\|
-= link_to 'Back', shitholes_path
+- model_class = Shithole
+.page-header
+  %h1=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => model_class.model_name.human
+= render :partial => "form"
