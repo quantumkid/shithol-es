@@ -5,7 +5,7 @@ class CreateShitholes < ActiveRecord::Migration
       t.integer :score
       t.float :cost
       t.string :imgurl
-      t.float :lat, :lng, :scale => 3
+      t.float :lat, :lng, :scale => 6
       
       t.timestamps
     end
