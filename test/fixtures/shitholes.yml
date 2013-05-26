@@ -4,8 +4,19 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-#  column: value
+61_Bailey_House:
+  name: 61 Bailey House
+  score: 5
+  cost: 0
+  imgurl: No image
+  lat: 52.194031
+  lng: 0.139968
+  
+White_Swan:
+  name: The White Swan
+  score: 1
+  cost: 0
+  imgurl: No image
+  lat: 52.199296
+  lng: 0.139571
+
