@@ -35,6 +35,9 @@
     = f.label :lng, :class => 'control-label'
     .controls
       = f.text_field :lng, :class => 'text_field'
+
+  = render :partial => "gmap_js", :locals => {:editable => true}
+      
   .form-actions
     = f.submit nil, :class => 'btn btn-primary'
     = link_to t('.cancel', :default => t("helpers.links.cancel")), shitholes_path, :class => 'btn'

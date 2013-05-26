@@ -1,7 +1,3 @@
-- content_for :gmaps_js do
-  = javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ShitholEs::Application.config.google_api_key}&sensor=false"
-  = javascript_include_tag 'googlemaps/index'
-
 - model_class = Shithole
 .page-header
   %h1=t '.title', :default => model_class.model_name.human
@@ -31,7 +27,7 @@
   %br
   = @shithole.lng
 
-= render 'gmap_js'
+= render "gmap_js"
 
 .form-actions
   = link_to t('.back', :default => t("helpers.links.back")), shitholes_path, :class => 'btn'

@@ -1,1 +1,9 @@
-#map-canvas
+- content_for :gmaps_js do
+  = javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ShitholEs::Application.config.google_api_key}&sensor=false"
+  = javascript_include_tag 'googlemaps/index'
+  - if defined? editable
+    = javascript_tag '$(function(){window.edit_map();});'
+  - else
+    = javascript_tag '$(function(){window.show_map();});'
+
+#map-canvas{:data => {:latitude => @shithole.lat, :longitude => @shithole.lng}}

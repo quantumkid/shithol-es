@@ -1,11 +1,16 @@
-#TODO Consider moving this outside the asset pipeline at some point
+center = new google.maps.LatLng $('#map-canvas').data('latitude'), $('#map-canvas').data('longitude')
+map = new google.maps.Map $('#map-canvas')[0]
 
-initialize = ->
-  mapOptions =
-    center: new google.maps.LatLng -34.397, 150.644
+window.show_map = ->
+  map.setOptions
+    center: center
     zoom: 8
     mapTypeId: google.maps.MapTypeId.ROADMAP
-  map = new google.maps.Map $('#map-canvas')[0], mapOptions
   
-$ ->
-  initialize()
+  marker = new google.maps.Marker
+    position: center
+    map: map
+    animation: google.maps.Animation.DROP
+    
+window.edit_map = ->  
+  window.show_map()
