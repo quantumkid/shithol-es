@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-ShitholEs::Application.load_tasks
+Shitholes::Application.load_tasks

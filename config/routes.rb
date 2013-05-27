@@ -1,4 +1,4 @@
-ShitholEs::Application.routes.draw do
+Shitholes::Application.routes.draw do
   resources :toilets
 
 

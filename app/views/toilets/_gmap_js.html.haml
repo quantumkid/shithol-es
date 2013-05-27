@@ -1,5 +1,5 @@
 - content_for :gmaps_js do
-  = javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ShitholEs::Application.config.google_api_key}&sensor=false"
+  = javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{Shitholes::Application.config.google_api_key}&sensor=false"
   = javascript_include_tag 'googlemaps/googlemaps'
   - if defined? editable
     = javascript_tag '$(function(){window.edit_map();});'
