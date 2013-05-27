@@ -4,7 +4,7 @@ map = new google.maps.Map $('#map-canvas')[0]
 window.show_map = ->
   map.setOptions
     center: center
-    zoom: 8
+    zoom: 15
     mapTypeId: google.maps.MapTypeId.ROADMAP
   
   marker = new google.maps.Marker
