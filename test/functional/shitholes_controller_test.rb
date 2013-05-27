@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ShitholesControllerTest < ActionController::TestCase
   setup do
-    @shithole = shitholes(:one)
+    @shithole = shitholes(:BaileyHouse)
   end
 
   test "should get index" do
@@ -18,7 +18,14 @@ class ShitholesControllerTest < ActionController::TestCase
 
   test "should create shithole" do
     assert_difference('Shithole.count') do
-      post :create, shithole: {  }
+      post :create, shithole: {
+        :name => "61 Bailey House",
+        :score => 5,
+        :cost => 0,
+        :imgurl => "No image",
+        :lat => 52.194031,
+        :lng => 0.139968
+      }
     end
 
     assert_redirected_to shithole_path(assigns(:shithole))
