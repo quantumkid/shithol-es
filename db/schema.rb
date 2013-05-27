@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(:version => 20130522184245) do
 
-  create_table "shitholes", :force => true do |t|
+  create_table "toilets", :force => true do |t|
     t.string   "name"
     t.integer  "score"
     t.float    "cost"

@@ -1,6 +1,6 @@
-class CreateShitholes < ActiveRecord::Migration
+class CreateToilets < ActiveRecord::Migration
   def change
-    create_table :shitholes do |t|
+    create_table :toilets do |t|
       t.string :name
       t.integer :score
       t.float :cost

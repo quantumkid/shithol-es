@@ -1,4 +1,4 @@
-class Shithole < ActiveRecord::Base
+class Toilet < ActiveRecord::Base
   MIN_SCORE = 1
   MAX_SCORE = 5
   
