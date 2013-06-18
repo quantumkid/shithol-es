@@ -1,5 +1,9 @@
 Shitholes::Application.routes.draw do
-  resources :toilets
+  resources :toilets do
+    collection do
+      get 'nearby'
+    end
+  end
 
 
   # The priority is based upon order of creation:

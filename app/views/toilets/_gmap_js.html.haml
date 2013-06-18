@@ -1,9 +1,12 @@
 - content_for :gmaps_js do
-  = javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{Shitholes::Application.config.google_api_key}&sensor=false"
+  = javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{Shitholes::Application.config.google_api_key}&sensor=true"
   = javascript_include_tag 'googlemaps/googlemaps'
-  - if defined? editable
-    = javascript_tag '$(function(){window.edit_map();});'
-  - else
-    = javascript_tag '$(function(){window.show_map();});'
+  :javascript
+    $(function() {
+      window.#{action_name}_map();
+    });
 
-#map-canvas{:data => {:latitude => @toilet.lat, :longitude => @toilet.lng}}
+- unless @toilet.nil?
+  #map-canvas{:data => {:latitude => @toilet.lat, :longitude => @toilet.lng}}
+- else
+  #map-canvas

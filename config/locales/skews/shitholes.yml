@@ -1,4 +1,7 @@
 en:
+  sitename: Shithol.es
   activerecord:
     models:
-      toilet: Shithole
+      toilet: 
+        one: Shithole
+        other: Shitholes

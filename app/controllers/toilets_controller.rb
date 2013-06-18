@@ -20,6 +20,18 @@ class ToiletsController < ApplicationController
       format.json { render json: @toilet }
     end
   end
+  
+  # GET /toilets/nearby
+  # GET /toilets/nearby.json
+  def nearby
+    #TODO improve this lookup to just return nearby toilets?
+    @toilets = Toilet.all
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @toilets }
+    end
+  end
 
   # GET /toilets/new
   # GET /toilets/new.json

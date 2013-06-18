@@ -1,4 +1,7 @@
 en:
+  sitename: Toilet Reviews
   activerecord:
     models:
-      toilet: Toilet
+      toilet: 
+        one: Toilet
+        other: Toilets

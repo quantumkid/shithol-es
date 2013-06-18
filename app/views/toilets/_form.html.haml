@@ -36,7 +36,7 @@
     .controls
       = f.text_field :lng, :class => 'text_field'
 
-  = render :partial => "gmap_js", :locals => {:editable => true}
+  = render "gmap_js"
       
   .form-actions
     = f.submit nil, :class => 'btn btn-primary'
